@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Reconhecimento LGP</string>
-    <string name="camera_permission_required">É necessária permissão para usar a câmara.</string>
-    <string name="no_hand_detected">Nenhuma mão detetada</string>
+    <string name="app_name">LGP Sign Recognition</string>
+    <string name="recognised_sign">Recognised sign</string>
+    <string name="no_hand">Show a sign to the camera</string>
+    <string name="hold_steady">Hold the sign steady</string>
+    <string name="confidence">%1$d%% confidence</string>
+    <string name="latency">%1$d ms</string>
+    <string name="permission_title">Camera access</string>
+    <string name="permission_rationale">The app needs the front camera to see your hand. Video is processed on the device and never leaves it.</string>
+    <string name="permission_denied">Camera access was denied. You can allow it in the app settings.</string>
+    <string name="allow_camera">Allow camera</string>
+    <string name="open_settings">Open settings</string>
+    <string name="error_title">Something went wrong</string>
 </resources>

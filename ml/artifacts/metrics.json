@@ -1,0 +1,128 @@
+{
+  "gestures": [
+    "agua",
+    "bom_dia",
+    "ola",
+    "sim"
+  ],
+  "per_frame": {
+    "accuracy": 0.8253588516746412,
+    "macro_f1": 0.8167485439589337
+  },
+  "smoothed": {
+    "window": 10,
+    "accuracy": 0.9411764705882353,
+    "macro_f1": 0.9338247114293055,
+    "report": {
+      "agua": {
+        "precision": 0.7962962962962963,
+        "recall": 0.9555555555555556,
+        "f1-score": 0.8686868686868687,
+        "support": 45.0
+      },
+      "bom_dia": {
+        "precision": 0.9622641509433962,
+        "recall": 0.9622641509433962,
+        "f1-score": 0.9622641509433962,
+        "support": 53.0
+      },
+      "ola": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 78.0
+      },
+      "sim": {
+        "precision": 0.9811320754716981,
+        "recall": 0.8387096774193549,
+        "f1-score": 0.9043478260869565,
+        "support": 62.0
+      },
+      "accuracy": 0.9411764705882353,
+      "macro avg": {
+        "precision": 0.9349231306778476,
+        "recall": 0.9391323459795767,
+        "f1-score": 0.9338247114293055,
+        "support": 238.0
+      },
+      "weighted avg": {
+        "precision": 0.9481660588763807,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9418507323878168,
+        "support": 238.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        43,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        51,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        78,
+        0
+      ],
+      [
+        9,
+        1,
+        0,
+        52
+      ]
+    ],
+    "thresholds": [
+      {
+        "threshold": 0.4,
+        "answered": 0.9831932773109243,
+        "accuracy": 0.9529914529914529
+      },
+      {
+        "threshold": 0.5,
+        "answered": 0.907563025210084,
+        "accuracy": 0.9768518518518519
+      },
+      {
+        "threshold": 0.6,
+        "answered": 0.8277310924369747,
+        "accuracy": 0.9949238578680203
+      },
+      {
+        "threshold": 0.7,
+        "answered": 0.7689075630252101,
+        "accuracy": 1.0
+      },
+      {
+        "threshold": 0.8,
+        "answered": 0.634453781512605,
+        "accuracy": 1.0
+      }
+    ]
+  },
+  "all_gestures": {
+    "gestures": [
+      "agua",
+      "bom_dia",
+      "nao",
+      "ola",
+      "por_favor",
+      "sim"
+    ],
+    "per_frame": {
+      "accuracy": 0.6873977086743044,
+      "macro_f1": 0.6708057070043552
+    },
+    "smoothed": {
+      "accuracy": 0.8797653958944281,
+      "macro_f1": 0.8692464239365073
+    }
+  },
+  "samples": 418
+}

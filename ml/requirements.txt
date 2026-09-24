@@ -3,4 +3,6 @@ mediapipe==0.10.14
 numpy<2
 opencv-python
 scikit-learn
+matplotlib<3.10
 tqdm
+pytest

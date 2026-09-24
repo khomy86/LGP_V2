@@ -3,14 +3,14 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
-.ipynb_checkpoints/
+.pytest_cache/
 
-# Artefactos intermédios do pipeline
-ml/dados_processados.npz
-ml/*.tflite
+# Intermediate pipeline output (rebuilt by ml/extract.py)
+ml/artifacts/landmarks.npz
 
 # Android / Gradle
 .gradle/
+.kotlin/
 build/
 local.properties
 captures/
@@ -21,12 +21,15 @@ captures/
 *.jks
 *.keystore
 
-# IDEs
+# Node
+node_modules/
+
+# IDEs and OS
 .idea/
 .vscode/
 *.iml
-
-# Sistema e segredos
 .DS_Store
+
+# Secrets
 .env
 *.log

@@ -1,0 +1,26 @@
+{
+  "agua": {
+    "images": 123,
+    "detected": 90
+  },
+  "bom_dia": {
+    "images": 123,
+    "detected": 98
+  },
+  "nao": {
+    "images": 123,
+    "detected": 99
+  },
+  "ola": {
+    "images": 123,
+    "detected": 123
+  },
+  "por_favor": {
+    "images": 123,
+    "detected": 94
+  },
+  "sim": {
+    "images": 123,
+    "detected": 107
+  }
+}

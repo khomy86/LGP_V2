@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Reconhecimento_LGP"
+rootProject.name = "LGP Sign Recognition"
 include(":app")

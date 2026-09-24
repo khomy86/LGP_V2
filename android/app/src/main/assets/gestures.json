@@ -1,0 +1,30 @@
+{
+  "smoothingWindow": 10,
+  "minConfidence": 0.6,
+  "gestures": [
+    {
+      "id": "agua",
+      "name": "Água",
+      "meaning": "Water",
+      "handShape": "Flat hand, edge towards the camera"
+    },
+    {
+      "id": "bom_dia",
+      "name": "Bom dia",
+      "meaning": "Good morning",
+      "handShape": "Thumbs up"
+    },
+    {
+      "id": "ola",
+      "name": "Olá",
+      "meaning": "Hello",
+      "handShape": "Open palm, fingers spread"
+    },
+    {
+      "id": "sim",
+      "name": "Sim",
+      "meaning": "Yes",
+      "handShape": "Closed fist"
+    }
+  ]
+}

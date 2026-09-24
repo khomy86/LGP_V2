@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LGP Sign Recognition</title>
+  <meta name="description" content="Real-time Portuguese Sign Language hand-shape recognition that runs entirely in your browser.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a78d6'/%3E%3Cpath d='M11 23v-9m4 9V9m4 14V10m4 13v-8' stroke='white' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M11 23v-9m4 9V9m4 14V10m4 13v-8"/></svg>
+      <span>LGP Sign Recognition</span>
+    </div>
+    <a class="github-link" href="https://github.com/khomy86/lgp-sign-recognition" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      <span>Source</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Portuguese Sign Language, recognised live in your browser</h1>
+      <p>Show one of the signs below to your camera. A hand-landmark model finds your hand, and a small neural network trained on our own dataset recognises the hand shape. Nothing is uploaded: the video never leaves your device.</p>
+    </section>
+
+    <section class="demo">
+      <div class="stage" id="stage">
+        <video id="video" playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div class="stage-message" id="stage-message">
+          <p id="stage-text">Camera is off</p>
+          <button id="start" class="button" type="button">Enable camera</button>
+        </div>
+        <div class="stage-status" id="status" role="status" hidden></div>
+      </div>
+
+      <aside class="panel">
+        <div class="prediction" aria-live="polite">
+          <p class="label">Recognised sign</p>
+          <p class="prediction-name" id="prediction-name">—</p>
+          <p class="prediction-meaning" id="prediction-meaning">Waiting for a hand</p>
+          <div class="meter" aria-hidden="true"><div class="meter-fill" id="prediction-meter"></div></div>
+          <p class="prediction-confidence" id="prediction-confidence">&nbsp;</p>
+        </div>
+
+        <div class="gesture-list">
+          <p class="label">Signs this model knows</p>
+          <ul id="gestures"></ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="how">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><span class="step-title">Find the hand</span>MediaPipe's hand landmarker returns 21 3D points for the hand in each video frame.</li>
+        <li><span class="step-title">Normalise</span>Points are made relative to the wrist and scaled by hand size, so position and distance to the camera don't matter.</li>
+        <li><span class="step-title">Classify</span>A 17k-parameter neural network scores each frame. The same model ships as TensorFlow Lite in the Android app.</li>
+        <li><span class="step-title">Smooth</span>The last <span data-window>10</span> frames are averaged, and a sign is shown only above <span data-threshold>60%</span> confidence.</li>
+      </ol>
+      <p class="footnote">Recognises static hand shapes only. Signs that differ only in movement are out of scope. Trained on a small dataset recorded by a few people, so results vary with lighting and hands.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Ivanilson Braga, Zakhar Khomyakivskyy and Ektiandro Elizabeth.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
