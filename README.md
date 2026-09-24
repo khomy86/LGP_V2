@@ -125,7 +125,7 @@ Many dataset photos are tight crops where MediaPipe's palm detector fails. `extr
 ```bash
 cd web
 python3 -m http.server 8000   # then open http://localhost:8000
-node --test tests/
+node --test "tests/*.test.js"
 ```
 
 The camera needs a secure context, which `localhost` is.
