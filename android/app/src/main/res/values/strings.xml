@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Reconhecimento LGP</string>
+    <string name="camera_permission_required">É necessária permissão para usar a câmara.</string>
+    <string name="no_hand_detected">Nenhuma mão detetada</string>
+</resources>

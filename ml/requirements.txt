@@ -1,0 +1,6 @@
+tensorflow==2.15.1
+mediapipe==0.10.14
+numpy<2
+opencv-python
+scikit-learn
+tqdm

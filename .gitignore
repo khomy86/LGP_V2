@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Artefactos intermédios do pipeline
+ml/dados_processados.npz
+ml/*.tflite
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Sistema e segredos
+.DS_Store
+.env
+*.log
